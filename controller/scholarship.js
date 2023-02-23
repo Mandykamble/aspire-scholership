@@ -5,16 +5,16 @@ const Scholarship= require("../model/scholarship.js");
 
 const cookieParser = require("cookie-parser");
 // Body-parser middleware
-let num=1;
+
 
 exports.postScholarship = async(req,res,next)=>{
     // console.log(req.body)
 
     try {
-        
+        let num=0;
         const newScholarship= new Scholarship(req.body);
         newScholarship.Scholershipid = num;
-        num = num ++;
+        num = num+1;
         // const user = jwt.verify(req.cookies.access_token,process.env.ACCESS_TOKEN);   
         // if(
             //     !newScholarship.scheamname ||
