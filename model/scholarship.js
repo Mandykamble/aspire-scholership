@@ -5,6 +5,10 @@ const scholershipSchema = new mongoose.Schema({
     Scholershipid:{
         type:Number,
     },
+    DepartmentName:{
+        type:String,
+        required :[true,"Please provide your name"]  
+    },
     scheamname:{
         type:String,
         required :[true,"Please provide your name"]  
@@ -13,30 +17,22 @@ const scholershipSchema = new mongoose.Schema({
         type:String,
         required :[true,"Please provide your scheamname"]  
     },
+    ScheamAmmount:{
+        type:Number,
+        required :[true,"Please provide your ScheamAmmount"] 
+    },
     scheamType:{
         type:String,
-        required :[true,"Please provide your scheamType"]  
-    },
-    FinancialYear:{
-        type:Number,
-        // required :[true,"Please provide your Phone FinancialYear"]  
+        // required :[true,"Please provide your scheamType"]  
     },
     ScheamFor:{
         type:String,
         // required :[true,"Please provide your ScheamFor"] 
     },
-    ScheamAmmount:{
-        type:Number,
-        // required :[true,"Please provide your ScheamAmmount"] 
+    RequiredDocuments:{
+        type:String,
     },
-    startDate:{
-        type:Number,
-        // required :[true,"Please provide your endDate"] 
-    },
-    endDate:{
-        type:Number,
-        // required :[true,"Please provide your endDate"] 
-    },
+    
     EligibilityCriteria:{
         gender:{
             type:String
@@ -49,39 +45,10 @@ const scholershipSchema = new mongoose.Schema({
         }
         
     },
-    AcadamicsDetails:{
-        courceLevelName:{
-            type:String
-          },
-        CourceName:{
-            type:String
-        },
-        scoreType:{
-            type:String
-        },
-        score:{
-            type:Number
-        },
-        passingYear:{
-            type:String
-        },
+    
 
+    
         
-    },
-
-    AdditionalInfo:{
-        spocName:{
-            type:String
-          },
-        spocEmail:{
-            type:String
-        },
-        helpDescNo:{
-            type:Number
-        },
-        
-        
-    }
 
 
 });
