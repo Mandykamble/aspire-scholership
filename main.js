@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 const scholarshipRoute = require("./routes/scholarships.js");
+const organisationRoute = require("./routes/organisations.js");
 dotenv.config();
 const app = express();
 const PORT = 3000 || process.env.PORT;
@@ -27,6 +28,7 @@ console.log(mongoose.connection.readyState);
 //middleware
 // app.use(errorHandler);
 app.use("/api/scholarship/",scholarshipRoute);
+app.use("/api/organisation/",organisationRoute);
 
 app.use(cookieParser());
 
