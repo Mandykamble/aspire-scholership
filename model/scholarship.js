@@ -32,6 +32,12 @@ const scholershipSchema = new mongoose.Schema({
     RequiredDocuments:{
         type:String,
     },
+    startdate:{
+        type:Number,
+    },
+    enddate:{
+        type:Number,
+    },
     
     EligibilityCriteria:{
         gender:{

@@ -9,7 +9,7 @@ const orgSchema = new mongoose.Schema({
         type:String,
         required :[true,"Please provide your name"]  
     },
-    usernamepassword:{
+    userpassword:{
         type:String,
         required :[true,"Please provide your name"]  
     },
